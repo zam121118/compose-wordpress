@@ -50,9 +50,10 @@ services:
     depends_on:
       - db
     image: wordpress:latest
+    network_mode:
+      - bridge
     ports:
       - "8000:80"
-      - "8008:8080"
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: root
