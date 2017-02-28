@@ -11,7 +11,7 @@ services:
       - "4001:4001"
       - "7001:7001"
     volumes:
-      - /data/backup/dir:/data
+      - etcdback:/data
     environment:
       discovery: https://discovery.etcd.io/425ef6dec81e2b26146704c09c51ab22
     deploy:
@@ -68,7 +68,7 @@ services:
 
 volumes:
     db_data:
-
+    etcdback:
 networks:
      front:
      etcdnet:
