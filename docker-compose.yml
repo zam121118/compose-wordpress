@@ -23,6 +23,8 @@ services:
         condition: on-failure
 
   db:
+    depends_on:
+      - etcd
     image: perconalab/percona-xtradb-cluster:5.6
     volumes:
       - db_data:/var/lib/mysql
