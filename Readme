@@ -1,0 +1,5 @@
+used docker swarm mode
+v3 compose file
+docker stack deploy -c docker-compose.yml wordpress
+
+make sure you db volumes to Persistent storage
